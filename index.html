@@ -36,7 +36,7 @@
 </head>
 
 <body>
-  <title>GreenSip</title>
+  <title>Green Sip</title>
   <meta name="claude:viewport-fit-sides" content="cover">
   <meta name="description"
     content="Green Sip serves chai and coffee in flavoured edible cups. Build your own kit online. Rahim Yar Khan.">
@@ -2622,7 +2622,7 @@
               <ul class="kit-list" id="kitList">
                 <li>Flavoured edible cup</li>
                 <li>Two complimentary biscuits</li>
-                <li>Tea sachet</li>
+                <li>Tea bag or coffee bag, your choice</li>
                 <li>Sugar, regular or sugar-free</li>
                 <li>Powdered milk</li>
               </ul>
@@ -2651,8 +2651,8 @@
             <span class="eyebrow" id="flavours">Make Your Own Deal</span>
             <h2>Pick a flavour. Make it yours.</h2>
           </div>
-          <p class="lead">Choose a cup flavour, your drink and how sweet you want it. Two biscuits come with every
-            drink. Extra biscuits are available to buy.</p>
+          <p class="lead">Choose a cup flavour, a tea bag or coffee bag, and how sweet you want it. Two biscuits come
+            with every drink. Extra biscuits are available to buy.</p>
         </div>
         <div class="shop-grid" id="build">
           <aside class="preview" aria-label="Your kit">
@@ -2667,13 +2667,13 @@
               <div class="opts" id="flavOpts" role="radiogroup" aria-label="Cup flavour"></div>
             </fieldset>
             <fieldset>
-              <legend>2. Drink</legend>
+              <legend>2. Tea bag or coffee bag <small>Your choice</small></legend>
               <div class="opts two">
                 <label class="opt"><input type="radio" name="drink" value="chai" id="drink-chai" checked><span
-                    class="opt-body"><strong>Chai</strong><span class="sub">Tea sachet, milk powder,
+                    class="opt-body"><strong>Tea bag</strong><span class="sub">For chai. Comes with milk powder and
                       sugar.</span></span></label>
                 <label class="opt"><input type="radio" name="drink" value="coffee" id="drink-coffee"><span
-                    class="opt-body"><strong>Coffee</strong><span class="sub">Coffee sachet, milk powder,
+                    class="opt-body"><strong>Coffee bag</strong><span class="sub">For coffee. Comes with milk powder and
                       sugar.</span></span></label>
               </div>
             </fieldset>
@@ -2699,10 +2699,7 @@
                 </div>
               </div>
             </fieldset>
-            <fieldset>
-              <legend>5. How you get it</legend>
-              <div class="opts three" id="modeOpts" role="radiogroup" aria-label="How you get it"></div>
-            </fieldset>
+            <p class="note">Green Sip takes orders online only. Every order is delivered to your door.</p>
             <div class="addrow">
               <div class="stepper" role="group" aria-label="Number of kits">
                 <button type="button" id="qMinus" aria-label="Fewer kits">−</button><output id="qOut"
@@ -2732,7 +2729,8 @@
               </svg></div>
             <div><span class="num">STEP 1</span>
               <h3>Choose</h3>
-              <p>Pick your cup flavour, your drink and your sugar on this page. That is your Make Your Own Deal.</p>
+              <p>Pick your cup flavour, tea bag or coffee bag, and your sugar on this page. That is your Make Your Own
+                Deal.</p>
             </div>
           </article>
           <article class="xp">
@@ -2745,8 +2743,8 @@
               </svg></div>
             <div><span class="num">STEP 2</span>
               <h3>Receive</h3>
-              <p>Collect it at our stall or have it delivered. Your kit holds the cup, two biscuits and a ready packet
-                of tea, sugar and milk.</p>
+              <p>Your kit is delivered to your door. It holds the cup, two biscuits and a ready pack of tea or coffee,
+                sugar and milk powder.</p>
             </div>
           </article>
           <article class="xp">
@@ -2755,7 +2753,8 @@
               </svg></div>
             <div><span class="num">STEP 3</span>
               <h3>Add boiling water</h3>
-              <p>Just add boiling water for chai or coffee. At the stall, the team prepares it fresh for you.</p>
+              <p>Put your tea bag or coffee bag with the sugar and milk powder in the cup, then just add boiling water.
+              </p>
             </div>
           </article>
           <article class="xp">
@@ -2771,7 +2770,7 @@
           </article>
         </div>
         <div class="x-bar" aria-hidden="true"><i id="xBar"></i></div>
-        <p class="x-note">Steps for the take-away kit. The stall serves it ready to drink.</p>
+        <p class="x-note">Online orders only, delivered to your door.</p>
       </div>
     </section>
 
@@ -2800,7 +2799,7 @@
               <li>Reduce plastic and paper cup waste with tea and coffee in flavoured edible cups.</li>
               <li>Offer affordable, customizable drinks, including sugar-free options.</li>
               <li>Bring ready-to-use beverage kits and online ordering with smart tools.</li>
-              <li>Serve Rahim Yar Khan and beyond, with home delivery and an on-the-spot stall.</li>
+              <li>Serve Rahim Yar Khan and beyond, with online ordering and home delivery.</li>
             </ol>
           </div>
         </div>
@@ -2827,7 +2826,7 @@
             <li>Offer different cup flavours and customizable tea and coffee.</li>
             <li>Provide regular and sugar-free options.</li>
             <li>Build a website with recommendations, a chatbot and online ordering.</li>
-            <li>Offer home delivery and a physical stall.</li>
+            <li>Deliver every online order to the customer's door.</li>
             <li>Give two complimentary biscuits with each order.</li>
           </ul>
         </div>
@@ -2929,17 +2928,16 @@
       'use strict';
 
       /* ================= EDIT HERE =================
-         Flavours, prices and contact details were not provided, so they are placeholders.
+         Flavours: Biscuit, Chocolate, Vanilla. Prices and contact details were not provided, so they are placeholders.
          Leave a price as null to show "To be confirmed". */
       var CONFIG = {
         currency: 'Rs.',
         prices: { kit: null, extraBiscuit: null, spoon: null, delivery: null },
         contact: { whatsapp: '', email: '', instagram: '' },
         flavours: [
-          { id: 'f1', name: 'Flavour 1', cup: '#D98A3D', dark: '#B4691F' },
-          { id: 'f2', name: 'Flavour 2', cup: '#8C5A3A', dark: '#6A3F25' },
-          { id: 'f3', name: 'Flavour 3', cup: '#9DB955', dark: '#738D36' },
-          { id: 'f4', name: 'Flavour 4', cup: '#D98B96', dark: '#B4626F' }
+          { id: 'f1', name: 'Biscuit', cup: '#D98A3D', dark: '#B4691F' },
+          { id: 'f2', name: 'Chocolate', cup: '#7A4A2E', dark: '#59331D' },
+          { id: 'f3', name: 'Vanilla', cup: '#E6CB86', dark: '#C2A257' }
         ]
       };
       /* ============================================= */
@@ -3000,25 +2998,18 @@
 
       /* ---------- state ---------- */
       var SUGAR = [{ k: 0, l: 'Sugar-free', s: 'No sugar in the pack.' }, { k: 1, l: 'Light', s: 'A little sugar.' }, { k: 2, l: 'Regular', s: 'The usual amount.' }, { k: 3, l: 'Sweet', s: 'Extra sugar.' }];
-      var MODES = {
-        stall: { l: 'At our stall', s: 'Freshly prepared for you on the spot.' },
-        kit: { l: 'Take-away kit', s: 'Ready packet. Just add boiling water.' },
-        delivery: { l: 'Home delivery', s: 'Your kit delivered to your door.' }
-      };
-      var S = { flavour: 0, drink: 'chai', sugar: 2, spoon: false, extra: 0, mode: 'stall', qty: 1 };
+      var MODES = { delivery: { l: 'Home delivery' } };
+      var S = { flavour: 0, drink: 'chai', sugar: 2, spoon: false, extra: 0, mode: 'delivery', qty: 1 };
       var cart = [];
-      try { var saved = JSON.parse(localStorage.getItem('greensip-cart') || '[]'); if (Array.isArray(saved)) cart = saved.filter(function (c) { return c && F[c.flavour] && MODES[c.mode] && SUGAR[c.sugar] }) } catch (e) { }
+      try { var saved = JSON.parse(localStorage.getItem('greensip-cart') || '[]'); if (Array.isArray(saved)) cart = saved.filter(function (c) { return c && F[c.flavour] && SUGAR[c.sugar] }).map(function (c) { c.mode = 'delivery'; return c }) } catch (e) { }
       function saveCart() { try { localStorage.setItem('greensip-cart', JSON.stringify(cart)) } catch (e) { } }
 
       /* ---------- shop UI build ---------- */
       $('#flavOpts').innerHTML = F.map(function (f, i) {
-        return '<label class="opt"><input type="radio" name="flavour" id="flav-' + f.id + '" value="' + i + '"' + (i === 0 ? ' checked' : '') + '><span class="opt-body"><svg class="mini" viewBox="0 0 400 400" style="--cup:' + f.cup + ';--cup-dark:' + f.dark + '" aria-hidden="true"><use href="#cup"/></svg><strong>' + f.name + '</strong><span class="tag">Name to be added</span></span></label>';
+        return '<label class="opt"><input type="radio" name="flavour" id="flav-' + f.id + '" value="' + i + '"' + (i === 0 ? ' checked' : '') + '><span class="opt-body"><svg class="mini" viewBox="0 0 400 400" style="--cup:' + f.cup + ';--cup-dark:' + f.dark + '" aria-hidden="true"><use href="#cup"/></svg><strong>' + f.name + '</strong><span class="sub">Edible cup</span></span></label>';
       }).join('');
       $('#sugarOpts').innerHTML = SUGAR.map(function (s) {
         return '<label class="opt"><input type="radio" name="sugar" id="sugar-' + s.k + '" value="' + s.k + '"' + (s.k === 2 ? ' checked' : '') + '><span class="opt-body"><strong>' + s.l + '</strong><span class="sub">' + s.s + '</span></span></label>';
-      }).join('');
-      $('#modeOpts').innerHTML = Object.keys(MODES).map(function (k, i) {
-        return '<label class="opt"><input type="radio" name="mode" id="mode-' + k + '" value="' + k + '"' + (i === 0 ? ' checked' : '') + '><span class="opt-body"><strong>' + MODES[k].l + '</strong><span class="sub">' + MODES[k].s + '</span></span></label>';
       }).join('');
 
       var pstage = $('#pstage');
@@ -3035,7 +3026,7 @@
       }
       function describe(c) {
         var f = F[c.flavour];
-        return f.name + ' cup · ' + (c.drink === 'chai' ? 'Chai' : 'Coffee') + ' · ' + SUGAR[c.sugar].l + (c.extra ? ' · +' + c.extra + ' extra biscuit' + (c.extra > 1 ? 's' : '') : '') + (c.spoon ? ' · Chocolate spoon' : '') + ' · ' + MODES[c.mode].l;
+        return f.name + ' cup · ' + (c.drink === 'chai' ? 'Tea bag' : 'Coffee bag') + ' · ' + SUGAR[c.sugar].l + (c.extra ? ' · +' + c.extra + ' extra biscuit' + (c.extra > 1 ? 's' : '') : '') + (c.spoon ? ' · Chocolate spoon' : '') + ' · ' + MODES[c.mode].l;
       }
       function renderPreview() {
         var f = F[S.flavour];
@@ -3044,7 +3035,7 @@
         pstage.classList.toggle('has-spoon', S.spoon);
         var rows = [
           ['Cup', f.name + ' edible cup'],
-          ['Drink', S.drink === 'chai' ? 'Chai · tea sachet' : 'Coffee · coffee sachet'],
+          ['Bag', S.drink === 'chai' ? 'Tea bag (chai)' : 'Coffee bag'],
           ['Sugar', SUGAR[S.sugar].l],
           ['Milk', 'Powdered milk'],
           ['Biscuits', '2 included' + (S.extra ? ' + ' + S.extra + ' extra' : '')]
@@ -3106,7 +3097,7 @@
         $('#checkout').style.display = cart.length ? 'grid' : 'none';
         $('#lines').innerHTML = cart.map(function (c, i) {
           var t = lineTotal(c);
-          return '<div class="line"><h3>' + c.qty + ' × ' + F[c.flavour].name + ' ' + (c.drink === 'chai' ? 'chai' : 'coffee') + ' kit</h3><p>' + describe(c).split(' · ').slice(2).join(' · ') + '</p><p>' + (t == null ? 'Price to be confirmed' : money(t)) + '</p><div class="ctl"><div class="stepper" role="group" aria-label="Quantity"><button type="button" data-a="dec" data-i="' + i + '" aria-label="Fewer">−</button><output>' + c.qty + '</output><button type="button" data-a="inc" data-i="' + i + '" aria-label="More">+</button></div><button type="button" class="rm" data-a="rm" data-i="' + i + '">Remove</button></div></div>';
+          return '<div class="line"><h3>' + c.qty + ' × ' + F[c.flavour].name + ' ' + (c.drink === 'chai' ? 'tea bag' : 'coffee bag') + ' kit</h3><p>' + describe(c).split(' · ').slice(2).join(' · ') + '</p><p>' + (t == null ? 'Price to be confirmed' : money(t)) + '</p><div class="ctl"><div class="stepper" role="group" aria-label="Quantity"><button type="button" data-a="dec" data-i="' + i + '" aria-label="Fewer">−</button><output>' + c.qty + '</output><button type="button" data-a="inc" data-i="' + i + '" aria-label="More">+</button></div><button type="button" class="rm" data-a="rm" data-i="' + i + '">Remove</button></div></div>';
         }).join('');
         var del = cart.some(function (c) { return c.mode === 'delivery' });
         $('#addrFld').hidden = !del;
